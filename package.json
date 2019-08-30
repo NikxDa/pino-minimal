@@ -1,0 +1,30 @@
+{
+  "name": "pino-minimal",
+  "version": "1.0.0",
+  "description": "A minimal and clean transport for the pino logger.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pino",
+    "pinojs",
+    "logger",
+    "transport",
+    "minimal",
+    "clean",
+    "modern",
+    "pretty"
+  ],
+  "author": "NikxDa",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "date-fns": "^2.0.1",
+    "figures": "^3.0.0",
+    "yargs": "^14.0.0"
+  },
+  "devDependencies": {
+    "pino": "^5.13.2"
+  }
+}
