@@ -1,6 +1,6 @@
 {
   "name": "pino-minimal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal and clean transport for the pino logger.",
   "main": "lib/index.js",
   "scripts": {
