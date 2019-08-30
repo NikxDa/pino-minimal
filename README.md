@@ -27,7 +27,7 @@ $ npm install -g pino-minimal
 ### Yarn
 
 ```bash
-$ yarn add pino-minimal
+$ yarn global add pino-minimal
 ```
 
 ## Usage
