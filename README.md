@@ -5,6 +5,12 @@
     <img alt="Header" src="images/pino-minimal.png" width="85%">
 </div>
 
+<p align="center">
+    <a href="https://travis-ci.org/NikxDa/pino-minimal">
+        <img alt="Travis Build Status" src="https://travis-ci.org/NikxDa/pino-minimal.svg?branch=master">
+    </a>
+</p>
+
 ## Description
 
 The `pino-minimal` transport provides a prettified, minimalistic and beautiful output for [Pino.js](https://github.com/pinojs/pino). It's output is strongly inspired by [Signale](https://github.com/klaussinani/signale).
