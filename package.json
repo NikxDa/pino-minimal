@@ -4,7 +4,7 @@
   "description": "A minimal and clean transport for the pino logger.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha lib/test.js"
   },
   "bin": {
     "pino-minimal": "lib/index.js"
@@ -28,6 +28,7 @@
     "yargs": "^14.0.0"
   },
   "devDependencies": {
+    "has-ansi": "^3.0.0",
     "mocha": "^6.2.0",
     "pino": "^5.13.2"
   }

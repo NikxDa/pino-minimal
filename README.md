@@ -44,10 +44,21 @@ To use it, simply pipe the output from Pino into this transport. Example:
 $ node server.js | pino-minimal
 ```
 
-This package accepts several arguments to change the logging behaviour:
+## Command Line Arguments
 
-- `--date`: Adds a date to the displayed timestamp
-- `--minimal`: Removes timestamps
+This package supports several command line arguments to customize the output. A flag that is true by default can be negated by using it with a `no` prefix, e.g. to hide the time, use the option `--no-time`.
+
+| Option/s | Type | Default | Description |
+| -------- | ---- | ------- | ----------- |
+| `--help`, `-h` | `boolean` | - | Show a help document. |
+| `--version`, `-v` | `boolean` | - | Show version information. |
+| `--date`, `-d` | `boolean` | `false` | Show a date in the log output. |
+| `--time`, `-t` | `boolean` | `true` | Show a time in the log output. Use `--no-time` to disable. |
+| `--stacktrace`, `-s` | `boolean` | `true` | Show a stack trace for errors that occur. Use `--no-stacktrace` to disable. |
+| `--colorize`, `-c` | `boolean` | Depends on terminal | Colorize the console output. Use `--no-colorize` to disable. |
+| `--messageKey` | `string` | `msg` | The JSON key to read the message from. |
+| `--timestampKey` | `string` | `time` | The JSON key to read the timestamp from. |
+| `--crlf`, `-f` | `boolean` | `false` | Use CRLF line endings instead of LF line endings. |
 
 ## License
 
