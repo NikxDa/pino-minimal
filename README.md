@@ -13,13 +13,14 @@
 
 ## Description
 
-The `pino-minimal` transport provides a prettified, minimalistic and beautiful output for [Pino.js](https://github.com/pinojs/pino). It's output is strongly inspired by [Signale](https://github.com/klaussinani/signale).
+The `pino-minimal` transport provides a prettified, minimalistic and beautiful output for [Pino.js](https://github.com/pinojs/pino). It's output format is strongly inspired by [Signale](https://github.com/klaussinani/signale).
 
 ## Contents
 
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Command Line Arguments](#command-line-arguments)
 - [License](#license)
 
 ## Installation
