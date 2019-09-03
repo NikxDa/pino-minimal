@@ -6,7 +6,7 @@ const assert = require ("assert");
 const figures = require ("figures");
 
 // Prepare a default Pino output
-const pinoMock = data => {
+const pinoMock = (data = {}) => {
     return JSON.stringify ({
         level: data.level || 10,
         time: data.time || (new Date).getTime (),
@@ -17,15 +17,14 @@ const pinoMock = data => {
 
 // Test time output
 it ("should print timestamps correctly", done => {
-    const now = (new Date).getTime ();
-    const date = new Date(now);
+    const date = new Date();
 
     const hours = String(date.getHours()).padStart(2, "0");
     const minutes = String(date.getMinutes()).padStart(2, "0");
     const seconds = String(date.getSeconds()).padStart(2, "0");
 
     const timeString = `${hours}:${minutes}:${seconds}`;
-    const data = parseLine (pinoMock ({ time: now }));
+    const data = parseLine (pinoMock ({ time: date.getTime () }));
 
     assert.equal (data.includes (`[${timeString}]`), true);
     assert.equal (data.includes (chalk.gray._styles[0].open), true);
@@ -40,6 +39,31 @@ it ("should output messages correctly", done => {
     const data = parseLine (pinoMock ({ message: logValue }));
 
     assert.equal (data.includes (chalk.gray (logValue)), true);
+
+    done ();
+})
+
+// Test --date flag
+it ("should show date with --date option", done => {
+    const date = new Date();
+
+    const days = String(date.getDate()).padStart(2, "0");
+    const months = String(date.getMonth() + 1).padStart(2, "0");
+    const year = String(date.getFullYear());
+
+    const dateString = `${days}.${months}.${year}`;
+    const data = parseLine (pinoMock ({ time: date.getTime () }), { date: true });
+
+    assert.equal (data.includes (dateString), true);
+
+    done ();
+})
+
+// Test --minimal flag
+it ("should hide timestamps with --minimal option", done => {
+    const data = parseLine (pinoMock (), { minimal: true });
+
+    assert.equal (/\[.+?\]/.test (data), false);
 
     done ();
 })
