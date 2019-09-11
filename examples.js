@@ -14,6 +14,11 @@ logger.warn ("Request exceeded maximum POST body size: 16MB");
 logger.error ("Could not establish database connection!");
 logger.fatal ("Encountered a stack overflow, shutting down...");
 logger.custom ("Special logs require special levels.");
+logger.info ({ keyOne: "1", keyTwo: new Buffer("test"), keyThree: { keyFour: [1, 2, 3], keyFive: false }});
+logger.info (new Buffer ("test"));
+logger.info (undefined);
+logger.info (null);
+logger.info (false);
 
 // Product an error
 try {
