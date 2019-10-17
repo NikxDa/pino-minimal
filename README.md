@@ -8,6 +8,7 @@
 <p align="center">
     <a href="https://travis-ci.org/NikxDa/pino-minimal">
         <img alt="Travis Build Status" src="https://travis-ci.org/NikxDa/pino-minimal.svg?branch=master">
+        <img alt="NPM version" src="https://img.shields.io/npm/v/pino-minimal">
     </a>
 </p>
 
