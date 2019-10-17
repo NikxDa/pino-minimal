@@ -56,6 +56,7 @@ This package supports several command line arguments to customize the output. A 
 | `--date`, `-d` | `boolean` | `false` | Show a date in the log output. |
 | `--time`, `-t` | `boolean` | `true` | Show a time in the log output. Use `--no-time` to disable. |
 | `--pid`, `-p` | `boolean` | `false` | Show the process ID (PID) in the log output. |
+| `--hostname`, `-h` | `boolean` | `false` | Show the hostname in the log output. |
 | `--stacktrace`, `-s` | `boolean` | `true` | Show a stack trace for errors that occur. Use `--no-stacktrace` to disable. |
 | `--colorize`, `-c` | `boolean` | Depends on terminal | Colorize the console output. Use `--no-colorize` to disable. |
 | `--messageKey` | `string` | `msg` | The JSON key to read the message from. |
