@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "has-ansi": "^3.0.0",
-    "mocha": "^6.2.3",
+    "mocha": "^10.2.0",
     "pino": "^5.17.0"
   }
 }
